@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+    parameters{
+        string(name:'container', defaultValue:'backend-reviews', description:'contenedor que usa la imagen a crear')
+    }
+    stages {
+        stage ("Probar conexion con Docker") {
+            steps {
+                sh "docker version"
+            }
+        }
+        stage ('parar contenedor docker'){
+            when{
+                expression{
+                    DOCKER_EXIST = sh(returnStdout:true,script:'docker ps -q --filter name=${container}')
+                    return DOCKER_EXIST != ''
+                }
+            }
+            steps{
+                sh 'docker stop ${container}'
+                echo 'stop docker $container'            
+            }
+        }
+        stage ("limpiar directorio"){
+            when{
+                expression{
+                    fileExists './Libraries-Sofware-3'
+                }
+            }
+            steps{
+                sh 'rm -r ./Libraries-Sofware-3'
+            }
+        }
+        stage ('crear imagen docker'){
+            steps{
+                script{
+                    sh'''
+                        git clone https://github.com/mannuluss/Libraries-Sofware-3.git
+                        docker build ./Libraries-Sofware-3/persistent-microservices/backend-reviews/ -t backend-reviews/images:latest --pull
+                    '''
+                }
+            }
+        }
+    }
+}

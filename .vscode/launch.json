@@ -1,0 +1,48 @@
+{
+    "configurations": [
+        {
+            "name": "Angular Store",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}/frontends/frontend-store/",
+            "type": "node-terminal"
+        },
+        {
+            "name": "Reviews",
+            "request": "launch",
+            "command": "npm run start",
+            "cwd": "${workspaceFolder}/persistent-microservices/backend-reviews/",
+            "type": "node-terminal"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendStoreApplication<backend-store>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "store.backendstore.BackendStoreApplication",
+            "projectName": "backend-store",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CatalogApplication<backend-catalog-library Persistent>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "example.libraries.CatalogApplication",
+            "projectName": "backend-catalog-library (2)",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CatalogApplication<backend-catalog-library>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "example.libraries.CatalogApplication",
+            "projectName": "backend-catalog-library",
+            "args": ""
+        }
+    ]
+}
