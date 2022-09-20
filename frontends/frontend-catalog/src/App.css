@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 p {
   font-family: "Oswald", sans-serif;
@@ -10,6 +11,8 @@ h4 {
   font-size: 1.2rem;
 }
 
+=======
+>>>>>>> 2c6ea4df2fe631283df8d00d962a1bf39fe9066a
 .spacer {
   flex: 1;
 }
@@ -41,6 +44,7 @@ h4 {
 }
 
 .card-container {
+<<<<<<< HEAD
   flex-direction: column;
   width: 100%;
   border: 3px solid #be95e5;
@@ -180,3 +184,67 @@ width: 100%;
 text-align: center;
 box-shadow: 2px 2px 2px 2px #e2e2e2;
 }
+=======
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 16px;
+  border: 2px solid darkgray;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.card-title .eliminar {
+  background-color: brown;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  left: 0;
+}
+
+.editar {
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  color: white;
+  right: 0;
+}
+
+.agregar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+  border: 2px solid blueviolet;
+  padding: 15px;
+  justify-content: space-around;
+}
+.valor{
+  color: green;
+}
+
+.name-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 250px;
+}
+.name-container p{
+  margin: 0;
+}
+>>>>>>> 2c6ea4df2fe631283df8d00d962a1bf39fe9066a

@@ -13,6 +13,10 @@ function App() {
     <div className="content">
       <ListaLibros />
     </div>
+<<<<<<< HEAD
+=======
+    <p>API_URL: {window?._env_?.CATALOG_URL}</p>,
+>>>>>>> 2c6ea4df2fe631283df8d00d962a1bf39fe9066a
   </>
   );
 }
